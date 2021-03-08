@@ -1,0 +1,79 @@
+img {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: 40px;
+  right: 50px;
+}
+form {
+  align-items: center;
+}
+
+header .title {
+  position: fixed;
+  background-color: #ffffff;
+  text-align: left;
+  width: 100%;
+  padding: 20px;
+}
+
+.title h1 {
+  font-family: "Dancing Script", cursive;
+  text-align: center;
+  padding-top: 30px;
+  font-size: 80px;
+}
+
+.title h4 {
+  font-family: "Times New Roman", Times, serif;
+  text-align: center;
+  color: #000000;
+}
+body {
+  background-image: linear-gradient(-20deg, #e9defa 0%, #fbfcdb 100%);
+}
+div .card {
+  background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+}
+
+h2 {
+  font-family: "Times New Roman", Times, serif;
+  color: #000000;
+  padding: 20px 10px;
+}
+h4 {
+  font-family: "Times New Roman", Times, serif;
+  text-align: center;
+  color: #000000;
+}
+
+h3 {
+  font-family: "Dancing Script", cursive;
+  text-align: center;
+}
+
+div .container1 {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 50px;
+  text-align: center;
+}
+
+div .container1 .row {
+  padding: 20px 10px 0px 10px;
+}
+
+div .container2 {
+  font-size: 30px;
+  text-align: center;
+  padding-top: 30px;
+}
+
+div .card1,
+.card2,
+.card3,
+.card4,
+.card5,
+.card6 {
+  border-style: double;
+  border-color: teal;
+}
