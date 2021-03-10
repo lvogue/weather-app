@@ -30,8 +30,10 @@ function search(city) {
 function enter(event){
   event.preventDefault();
   let searchInput=document.querySelector("#search-input");
-  let replacement=document.querySelector("#city").value;
-  search(city);
+  let replacement=document.querySelector("#city");
+  let newCity=`${searchInput.value}`;
+  replacement.innerHTML=newCity;
+  search(newCity);
 }
 let form=document.querySelector("#search-bar");
 form.addEventListener("submit",enter);
