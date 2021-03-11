@@ -38,8 +38,6 @@ function enter(event){
 let form=document.querySelector("#search-bar");
 form.addEventListener("submit",enter);
 
-
-
 search("Portland");
 
 //to get location 
