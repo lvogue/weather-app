@@ -15,12 +15,15 @@ if (min<10){
 currentDate.innerHTML=`Today is ${day}, ${month} ${date}, ${year} (${hour}:${min})`;
 
 function showTemp(response){
+  let iconElement=document.querySelector("#icon");
+  let code=response.data.weather.[0].icon;
+  console.log(response.data);
 document.querySelector("#city").innerHTML=response.data.name;
 document.querySelector("#raw-temp").innerHTML=Math.round(response.data.main.temp);
 document.querySelector("#description").innerHTML =
     response.data.weather[0].main;
 document.querySelector("#humidity").innerHTML=response.data.main.humidity;
-document.querySelector("#icon").innerHTML=decideIcon();
+iconElement.setAttribute("i",`http://openweathermap.org/img/wn/${code}@2x.png`);
 document.querySelector("#wind").innerHTML=Math.round(response.data.wind.speed);
 }
 function search(city) {
@@ -42,11 +45,8 @@ form.addEventListener("submit",enter);
 
 search("Portland");
 //to get location 
-// function showPortland(response){
-//   let temperature = Math.round(response.data.main.temp);
-//   console.log(temperature);
-//   console.log(response);
-//   let city = response.data.name;
+// let icon=`http://openweathermap.org/img/wn/${code}@2x.png`;
+//let code=response.data.weather.icon;
 
 
 
