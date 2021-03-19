@@ -17,7 +17,7 @@ currentDate.innerHTML=`Today is ${day}, ${month} ${date}, ${year} (${hour}:${min
 function showTemp(response){
 document.querySelector("#city").innerHTML=response.data.name;
 document.querySelector("#raw-temp").innerHTML=Math.round(response.data.main.temp);
-document.querySelector("#icon").innerHTML =
+document.querySelector("#description").innerHTML =
     response.data.weather[0].main;
     console.log(response.data.weather);
 }

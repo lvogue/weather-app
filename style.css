@@ -68,6 +68,12 @@ div .container1 .row {
 }
 
 div .container2 {
+  text-align: center;
+  font-size: 30px;
+  font-family: 'Times New Roman', Times, serif;
+
+}
+div .container3 {
   font-size: 30px;
   text-align: center;
   padding-top: 30px;
