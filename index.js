@@ -19,10 +19,12 @@ document.querySelector("#city").innerHTML=response.data.name;
 document.querySelector("#raw-temp").innerHTML=Math.round(response.data.main.temp);
 document.querySelector("#description").innerHTML =
     response.data.weather[0].main;
-    console.log(response.data.weather);
+document.querySelector("#humidity").innerHTML=response.data.main.humidity;
+document.querySelector("#icon").innerHTML=decideIcon();
+document.querySelector("#wind").innerHTML=Math.round(response.data.wind.speed);
 }
 function search(city) {
-  let apiKey = "e12d9ab66f6318d8049410e9e1d186f4";
+  let apiKey = "e12d9ab66f6318d8049410e9e1d186f4"; 
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(showTemp);
 }
@@ -39,7 +41,6 @@ let form=document.querySelector("#search-bar");
 form.addEventListener("submit",enter);
 
 search("Portland");
-
 //to get location 
 // function showPortland(response){
 //   let temperature = Math.round(response.data.main.temp);
