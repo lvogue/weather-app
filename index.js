@@ -16,14 +16,14 @@ currentDate.innerHTML=`Today is ${day}, ${month} ${date}, ${year} (${hour}:${min
 
 function showTemp(response){
   let iconElement=document.querySelector("#icon");
-  let code=response.data.weather.[0].icon;
+  let code=response.data.weather[0].icon;
   console.log(response.data);
 document.querySelector("#city").innerHTML=response.data.name;
 document.querySelector("#raw-temp").innerHTML=Math.round(response.data.main.temp);
 document.querySelector("#description").innerHTML =
     response.data.weather[0].main;
 document.querySelector("#humidity").innerHTML=response.data.main.humidity;
-iconElement.setAttribute("i",`http://openweathermap.org/img/wn/${code}@2x.png`);
+iconElement.setAttribute("src",`http://openweathermap.org/img/wn/${code}@2x.png`);
 document.querySelector("#wind").innerHTML=Math.round(response.data.wind.speed);
 }
 function search(city) {

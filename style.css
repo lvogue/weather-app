@@ -1,9 +1,13 @@
-img {
+img.plane {
   position: absolute;
   width: 100px;
   height: 100px;
   top: 40px;
   right: 50px;
+}
+img .icon{
+  display: block;
+  margin: 0 auto;
 }
 form {
   align-items: center;
