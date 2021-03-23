@@ -17,9 +17,9 @@ currentDate.innerHTML=`Today is ${day}, ${month} ${date}, ${year} (${hour}:${min
 function showTemp(response){
   let iconElement=document.querySelector("#icon");
   let code=response.data.weather[0].icon;
-  console.log(response.data);
+  celsiusTemp=response.data.main.temp;
 document.querySelector("#city").innerHTML=response.data.name;
-document.querySelector("#raw-temp").innerHTML=Math.round(response.data.main.temp);
+document.querySelector("#raw-temp").innerHTML=Math.round(celsiusTemp);
 document.querySelector("#description").innerHTML =
     response.data.weather[0].main;
 document.querySelector("#humidity").innerHTML=response.data.main.humidity;
@@ -42,6 +42,27 @@ function enter(event){
 }
 let form=document.querySelector("#search-bar");
 form.addEventListener("submit",enter);
+
+function displayConversionF(event){
+  event.preventDefault();
+  let temp=document.querySelector("#raw-temp");
+  let fahrenheitConversion=(celsiusTemp*9)/5+32;
+  temp.innerHTML=Math.round(fahrenheitConversion);
+}
+
+function dispayConversionC(event){
+  event.preventDefault();
+  let temp=document.querySelector("#raw-temp");
+  temp.innerHTML=Math.round(celsiusTemp);
+}
+
+let celsiusTemp=null;
+
+let fahrenheitLink=document.querySelector("#fahrenheit");
+fahrenheitLink.addEventListener("click",displayConversionF);
+
+let CelsiusLink=document.querySelector("#celsius");
+CelsiusLink.addEventListener("click",dispayConversionC);
 
 search("Portland");
 //to get location 
