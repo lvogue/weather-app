@@ -75,20 +75,8 @@ div .container2 {
   text-align: center;
   font-size: 30px;
   font-family: 'Times New Roman', Times, serif;
-
 }
-div .container3 {
-  font-size: 30px;
+
+p{
   text-align: center;
-  padding-top: 30px;
-}
-
-div .card1,
-.card2,
-.card3,
-.card4,
-.card5,
-.card6 {
-  border-style: double;
-  border-color: teal;
 }

@@ -26,10 +26,17 @@ document.querySelector("#humidity").innerHTML=response.data.main.humidity;
 iconElement.setAttribute("src",`http://openweathermap.org/img/wn/${code}@2x.png`);
 document.querySelector("#wind").innerHTML=Math.round(response.data.wind.speed);
 }
+
+function showForcast(response){
+  console.log(response.data);
+}
 function search(city) {
   let apiKey = "e12d9ab66f6318d8049410e9e1d186f4"; 
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(showTemp);
+
+  apiUrl=`https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(showForcast);
 }
 
 function enter(event){
