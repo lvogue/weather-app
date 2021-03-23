@@ -46,6 +46,8 @@ form.addEventListener("submit",enter);
 function displayConversionF(event){
   event.preventDefault();
   let temp=document.querySelector("#raw-temp");
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
   let fahrenheitConversion=(celsiusTemp*9)/5+32;
   temp.innerHTML=Math.round(fahrenheitConversion);
 }
@@ -54,6 +56,8 @@ function dispayConversionC(event){
   event.preventDefault();
   let temp=document.querySelector("#raw-temp");
   temp.innerHTML=Math.round(celsiusTemp);
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
 }
 
 let celsiusTemp=null;
@@ -61,8 +65,8 @@ let celsiusTemp=null;
 let fahrenheitLink=document.querySelector("#fahrenheit");
 fahrenheitLink.addEventListener("click",displayConversionF);
 
-let CelsiusLink=document.querySelector("#celsius");
-CelsiusLink.addEventListener("click",dispayConversionC);
+let celsiusLink=document.querySelector("#celsius");
+celsiusLink.addEventListener("click",dispayConversionC);
 
 search("Portland");
 //to get location 
